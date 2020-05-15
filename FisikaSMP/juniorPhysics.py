@@ -313,18 +313,21 @@ def labelMateri(frame, column, *args):
         Label(frame, text=args[i], bg='white').grid(row=i, column=column)
 
 
-# Splash screen
-splash = Tk()
-splash.wm_overrideredirect(True)
-splash.geometry(f"{splash.winfo_screenwidth()}x{splash.winfo_screenheight()}")
+def startSplashScreen():
+    splash = Tk()
+    splash.wm_overrideredirect(True)
+    splash.geometry(f"{splash.winfo_screenwidth()}x{splash.winfo_screenheight()}")
 
-pict = PhotoImage(file="fis.png")
-background_label = Label(splash, image=pict)
-background_label.pack()
+    pict = PhotoImage(file="fis.png")
+    background_label = Label(splash, image=pict)
+    background_label.pack()
 
-splash.after(5000, splash.destroy)
-splash.mainloop()
-# ======================
+    splash.after(5000, splash.destroy)
+    splash.mainloop()
+
+
+startSplashScreen()
+
 mywindow = Tk()
 mywindow.wm_title("Belajar Fisika SMP")
 mywindow.geometry('640x480')
