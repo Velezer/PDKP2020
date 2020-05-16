@@ -56,7 +56,7 @@ class BelajarFisikaSMP:
         Label(form_frame, text="Password", font=("Arial", 18), bg='white').grid(row=1)
 
         user_entry = Entry(form_frame, font=("Arial", 15))
-        pass_entry = Entry(form_frame, font=("Arial", 15))
+        pass_entry = Entry(form_frame, show="*", font=("Arial", 15))
 
         user_entry.grid(row=0, column=1)
         pass_entry.grid(row=1, column=1)
